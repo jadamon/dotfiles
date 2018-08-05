@@ -3,6 +3,8 @@ syntax on
 filetype plugin indent on
 
 set noshowmode
+
+" set begin and end of line to what I would expect
 nnoremap _ g_
 nnoremap ^ _
 
