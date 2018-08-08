@@ -65,3 +65,6 @@ set guifont=consolas:h12:w5:b:cDEFAULT
 
 " add numbering to netrw
 let g:netrw_bufsettings = 'noma nomod nobl nowrap ro'
+
+" disable bells
+set vb t_vb=
