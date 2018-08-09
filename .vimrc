@@ -23,31 +23,21 @@ let mapleader = '\'
 nmap <space> <leader>
 vmap <space> <leader>
 
-" make moving and selecting whole lines make sense w/ relativenumber
-nnoremap <expr> _ v:count ? 'jg_':'g_'
-vnoremap <expr> _ v:count ? 'jg_':'g_'
-onoremap <expr> _ v:count ? 'jg_':'g_'
-nnoremap <expr> g_ v:count ? 'kg_':'g_'
-vnoremap <expr> g_ v:count ? 'kg_':'g_'
-onoremap <expr> g_ v:count ? 'kg_':'g_'
-nnoremap <expr> ^ v:count ? 'j^':'^'
-vnoremap <expr> ^ v:count ? 'j^':'^'
-onoremap <expr> ^ v:count ? 'j^':'^'
-nnoremap <expr> g^ v:count ? 'k^':'^'
-vnoremap <expr> g^ v:count ? 'k^':'^'
-onoremap <expr> g^ v:count ? 'k^':'^'
-nnoremap <expr> $ v:count ? 'j$':'$'
-vnoremap <expr> $ v:count ? 'j$':'$'
-onoremap <expr> $ v:count ? 'j$':'$'
-nnoremap <expr> g$ v:count ? 'k$':'$'
-vnoremap <expr> g$ v:count ? 'k$':'$'
-onoremap <expr> g$ v:count ? 'k$':'$'
+" make 'beginning' and 'end' of line mappings consistent
+" now they optionally go down to line labeled <expr> for select/yank
+" by default assumes labeling is relativ numbering
+nnoremap <expr> <leader>_ v:count ? 'jg_':'g_'
+vnoremap <expr> <leader>_ v:count ? 'jg_':'g_'
+onoremap <expr> <leader>_ v:count ? 'jg_':'g_'
+nnoremap <expr> <leader>^ v:count ? 'j^':'^'
+vnoremap <expr> <leader>^ v:count ? 'j^':'^'
+onoremap <expr> <leader>^ v:count ? 'j^':'^'
+nnoremap <expr> <leader>$ v:count ? 'j$':'$'
+vnoremap <expr> <leader>$ v:count ? 'j$':'$'
+onoremap <expr> <leader>$ v:count ? 'j$':'$'
 nnoremap <expr> <leader>0 v:count ? 'jg0':'g0'
 vnoremap <expr> <leader>0 v:count ? 'jg0':'g0'
 onoremap <expr> <leader>0 v:count ? 'jg0':'g0'
-nnoremap <expr> g0 v:count ? 'kg0':'g0'
-vnoremap <expr> g0 v:count ? 'kg0':'g0'
-onoremap <expr> g0 v:count ? 'kg0':'g0'
 
 " map kj to be universally 'back to normal mode'
 inoremap kj <esc>
