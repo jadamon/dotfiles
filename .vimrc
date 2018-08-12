@@ -22,6 +22,9 @@ let mapleader = '\'
 " avoids awkward pausing on hitting space in insert mode
 nmap <space> <leader>
 vmap <space> <leader>
+omap <space> <leader>
+" make sure to unmap <space> as an operator
+" ounmap <space>
 
 " make 'beginning' and 'end' of line mappings consistent
 " now they optionally go down to line labeled <expr> for select/yank
